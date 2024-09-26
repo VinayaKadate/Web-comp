@@ -14,6 +14,10 @@
     color: white;
     padding: 1rem;
     text-align: center;
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it appears above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
   }
   
   header h1 {
@@ -33,6 +37,12 @@
   nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 10px 15px; /* Adds padding for better click area */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
   }
   
   .section {
@@ -51,8 +61,7 @@
     background-color: #222;
   }
   
-/* Updated CSS for the slideshow */
-.slideshow-container {
+  .slideshow-container {
     width: 100%;
     max-width: 1000px;
     height: 500px; /* Set a fixed height for the slideshow container */
@@ -84,7 +93,6 @@
     font-size: 1.2rem;
   }
   
-  
   #home h2 {
     font-size: 2.5rem;
     margin-top: 20px;
@@ -98,6 +106,11 @@
     font-size: 1rem;
     cursor: pointer;
     margin-top: 20px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  #home button:hover {
+    background-color: #e74c3c; /* Darker shade on hover */
   }
   
   #destinations {
@@ -118,6 +131,11 @@
     padding: 1rem;
     width: 250px;
     text-align: center;
+    transition: transform 0.3s; /* Smooth scaling effect on hover */
+  }
+  
+  .destination-card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
   }
   
   .destination-card img {
@@ -154,9 +172,23 @@
     padding: 0.7rem 1.5rem;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
   }
   
   form button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Darker shade on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul li {
+      display: block; /* Stack links vertically on small screens */
+      margin: 0.5rem 0;
+    }
+    
+    .destination-card {
+      width: 90%; /* Make cards responsive */
+      max-width: 400px; /* Limit max width */
+    }
   }
   
