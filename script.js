@@ -1,14 +1,15 @@
 // Scroll to Destinations section
-function scrollToDestinations() {
-    const destinationSection = document.getElementById('destinations');
-    if (destinationSection) {
-      destinationSection.scrollIntoView({ behavior: 'smooth' });
-    }
+// Get the button element
+const exploreButton = document.getElementById('exploreButton');
+
+// Add an event listener to the button
+exploreButton.addEventListener('click', function() {
+  // Scroll to the destinations section
+  const destinationSection = document.getElementById('destinations');
+  if (destinationSection) {
+    destinationSection.scrollIntoView({ behavior: 'smooth' });
   }
-  
-  // Attach the function to the Explore Destinations button
-  document.getElementById('exploreButton').addEventListener('click', scrollToDestinations);
-  
+});
   // Contact form submission handling
   const contactForm = document.getElementById('contact-form');
   contactForm.addEventListener('submit', function(event) {
